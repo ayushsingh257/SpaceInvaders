@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+.enemy {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  display: block;
+}
+
+/* Circle shape */
+.enemy.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(7, 185, 117); /* Change to desired color */
+}
+
+/* Triangle shape */
+.enemy.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid rgb(92, 80, 80); /* Triangle color */
+  position: absolute;
+}
+
+
+/* Square shape */
+.enemy.square {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(18, 230, 64); /* Change to desired color */
+}
+
+.boss {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: purple;
+  display: none; /* Hidden by default */
+}
+
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: rgb(77, 77, 69);
+}
+
+#level-display, #score-display {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+}
+
+#level-display {
+  left: 10px;
+}
+
+#score-display {
+  right: 10px;
+}
+
+#boss-announcement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: yellow;
+  display: none; /* Hidden by default */
+}
